@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dice Start - Inicio</title>
+  <style>
+    :root {
+      --bg: #f6f9fc;
+      --bg2: #edf3f9;
+      --text: #14324a;
+      --muted: #607286;
+      --card: rgba(255, 255, 255, 0.9);
+      --border: rgba(20, 50, 74, 0.10);
+      --blue: #2563eb;
+      --teal: #0f9b8e;
+      --cyan: #0284c7;
+      --amber: #b45309;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(2, 132, 199, 0.10), transparent 24%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 48px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      box-shadow: 0 12px 26px rgba(37, 99, 235, 0.20);
+    }
+
+    .topnav {
+      display: none;
+    }
+
+    .sys-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+      font-weight: 700;
+    }
+
+    .folder-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: end;
+      margin-bottom: 18px;
+      padding: 10px 10px 0;
+      border-bottom: 1px solid rgba(20, 50, 74, 0.08);
+    }
+
+    .tab-btn {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #ffffff, #eef4fa);
+      color: var(--text);
+      cursor: pointer;
+      border-bottom: none;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      padding: 12px 18px;
+      position: relative;
+      top: 1px;
+      box-shadow: 0 -2px 10px rgba(15, 23, 42, 0.04);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 18px 0 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--blue);
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4.8vw, 4.7rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      margin: 18px 0 0;
+      max-width: 62ch;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .intro-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 0;
+    }
+
+    .tab-btn[aria-selected="true"] {
+      color: white;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      top: 0;
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      color: white;
+    }
+
+    .secondary-btn {
+      background: white;
+      color: var(--blue);
+    }
+
+    .section-title {
+      margin: 28px 0 12px;
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-note {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .sys-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .system-card {
+      padding: 26px;
+      display: none;
+      scroll-margin-top: 18px;
+    }
+
+    .system-card.active {
+      display: block;
+    }
+
+    .system-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .system-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+    }
+
+    .system-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 75ch;
+    }
+
+    .info-box {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.55);
+      color: var(--text);
+    }
+
+    .info-box strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .sys-btn {
+      color: var(--text);
+    }
+
+    .sys-btn.primary {
+      color: white;
+      border: none;
+    }
+
+    .blue { border-left: 10px solid var(--blue); }
+    .teal { border-left: 10px solid var(--teal); }
+    .cyan { border-left: 10px solid var(--cyan); }
+    .amber { border-left: 10px solid var(--amber); }
+
+    .blue .tag { background: var(--blue); }
+    .teal .tag { background: var(--teal); }
+    .cyan .tag { background: var(--cyan); }
+    .amber .tag { background: var(--amber); }
+
+    .blue .primary-btn { background: linear-gradient(135deg, var(--blue), #4f83ff); }
+    .teal .primary-btn { background: linear-gradient(135deg, var(--teal), #21c2b2); }
+    .cyan .primary-btn { background: linear-gradient(135deg, var(--cyan), #38bdf8); }
+    .amber .primary-btn { background: linear-gradient(135deg, var(--amber), #d97706); }
+
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 760px) {
+      .topbar {
+        align-items: start;
+        flex-direction: column;
+      }
+      .hero-card {
+        padding: 28px;
+      }
+      .system-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">D</div>
+        <div>
+          <div>Dice Start</div>
+          <small style="color: var(--muted); font-weight: 600;">Soluciones para empresas</small>
+        </div>
+      </div>
+      <nav class="topnav" aria-label="Navegación"></nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card hero-card">
+          <div class="folder-bar" role="tablist" aria-label="Pestañas de sistemas">
+            <button class="sys-btn tab-btn" type="button" role="tab" aria-selected="true" data-target="quienes">Quiénes somos</button>
+            <button class="sys-btn tab-btn" type="button" role="tab" aria-selected="false" data-target="cumplimiento">Cumplimiento</button>
+            <button class="sys-btn tab-btn" type="button" role="tab" aria-selected="false" data-target="agenda">Agenda</button>
+            <button class="sys-btn tab-btn" type="button" role="tab" aria-selected="false" data-target="gestion">Gestión</button>
+            <button class="sys-btn tab-btn" type="button" role="tab" aria-selected="false" data-target="cfdi">CFDI</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="quienes" class="card system-card active" data-panel="quienes">
+        <div class="system-head">
+          <span class="tag" style="background: linear-gradient(135deg, var(--blue), var(--cyan));">Quiénes somos</span>
+        </div>
+        <h3>Soluciones simples para operar mejor</h3>
+        <p>
+          Somos una propuesta enfocada en productividad, control y claridad para empresas.
+          Centralizamos sistemas útiles en una sola vista para que el usuario encuentre rápido lo que necesita.
+        </p>
+        <div class="info-box">
+          <strong>Objetivo</strong>
+          <div>Presentar cada sistema de forma breve y directa, con acceso rápido desde pestañas.</div>
+        </div>
+      </section>
+
+      <section id="cumplimiento" class="card system-card blue" data-panel="cumplimiento">
+        <div class="system-head">
+          <span class="tag">Cumplimiento Regulatorio</span>
+          <a class="sys-btn" href="https://cumreinmobiliario.azurewebsites.net/" target="_blank" rel="noreferrer">Abrir sistema</a>
+        </div>
+        <h3>Información básica</h3>
+        <p>
+          Solución para consultar y organizar información de cumplimiento de forma clara.
+          Ideal para mostrar el valor del sistema y llevar al usuario al detalle completo.
+        </p>
+        <div class="info-box">
+          <strong>Acciones rápidas</strong>
+          <div class="link-row">
+            <a class="sys-btn primary" href="https://cumreinmobiliario.azurewebsites.net/" target="_blank" rel="noreferrer">Ver más</a>
+            <a class="sys-btn" href="#" target="_blank" rel="noreferrer">Video de YouTube</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="agenda" class="card system-card teal" data-panel="agenda">
+        <div class="system-head">
+          <span class="tag">Agenda Inteligente</span>
+          <a class="sys-btn" href="https://agenda-inteligente.azurewebsites.net/" target="_blank" rel="noreferrer">Abrir sistema</a>
+        </div>
+        <h3>Información y acceso demo</h3>
+        <p>
+          Sistema para organizar citas y coordinar recursos. Esta vista muestra el acceso de demostración
+          para que el usuario pueda probarlo de inmediato.
+        </p>
+        <div class="info-box">
+          <strong>Demo</strong>
+          <div>Usuario: <strong>demo</strong></div>
+          <div>Contraseña: <strong>demo</strong></div>
+          <div class="link-row" style="margin-top: 12px;">
+            <a class="sys-btn primary" href="https://agenda-inteligente.azurewebsites.net/" target="_blank" rel="noreferrer">Entrar a demo</a>
+            <a class="sys-btn" href="#" target="_blank" rel="noreferrer">Video de YouTube</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="gestion" class="card system-card cyan" data-panel="gestion">
+        <div class="system-head">
+          <span class="tag">Control de Gestión</span>
+          <a class="sys-btn" href="https://controldegestion.azurewebsites.net/" target="_blank" rel="noreferrer">Abrir sistema</a>
+        </div>
+        <h3>Información básica y precios</h3>
+        <p>
+          Plataforma para dar seguimiento a indicadores, procesos y decisiones.
+          Aquí puedes mostrar el precio de forma visible sin complicar la experiencia.
+        </p>
+        <div class="info-box">
+          <strong>Precio</strong>
+          <div>Solicitar cotización</div>
+          <strong style="margin-top: 12px;">Demo</strong>
+          <div>Usuario y contraseña disponibles en la versión de demostración.</div>
+          <div class="link-row" style="margin-top: 12px;">
+            <a class="sys-btn primary" href="https://controldegestion.azurewebsites.net/" target="_blank" rel="noreferrer">Ver demo</a>
+            <a class="sys-btn" href="https://controldegestion.azurewebsites.net/" target="_blank" rel="noreferrer">Ir al sistema</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="cfdi" class="card system-card amber" data-panel="cfdi">
+        <div class="system-head">
+          <span class="tag">Visor de CFDI</span>
+          <a class="sys-btn" href="https://cfdi.azurewebsites.net/" target="_blank" rel="noreferrer">Abrir sistema</a>
+        </div>
+        <h3>Acceso gratis con registro</h3>
+        <p>
+          Una solución breve para consultar y revisar CFDI. El usuario debe registrarse y usar la
+          versión gratuita para comenzar.
+        </p>
+        <div class="info-box">
+          <strong>Importante</strong>
+          <div>Primero registrarse y luego usar la versión gratis.</div>
+          <div class="link-row" style="margin-top: 12px;">
+            <a class="sys-btn primary" href="https://cfdi.azurewebsites.net/" target="_blank" rel="noreferrer">Registrarse</a>
+            <a class="sys-btn" href="https://cfdi.azurewebsites.net/" target="_blank" rel="noreferrer">Ir al sistema</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Una vista sencilla para presentar quiénes somos y mostrar un sistema a la vez.
+    </footer>
+  </div>
+  <script>
+    const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+    const panels = Array.from(document.querySelectorAll('[data-panel]'));
+
+    function showPanel(name) {
+      panels.forEach(panel => {
+        panel.classList.toggle('active', panel.dataset.panel === name);
+      });
+      tabs.forEach(tab => {
+        const selected = tab.dataset.target === name;
+        tab.setAttribute('aria-selected', String(selected));
+      });
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => showPanel(tab.dataset.target));
+    });
+
+    showPanel('quienes');
+  </script>
+</body>
+</html>
