@@ -1,362 +1,53 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>qb app - Inicio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="shell">
-      <header class="topbar">
-        <div class="brand">
-          <div class="brand-mark">qb</div>
-          <div>
-            <div>Quick Business App</div>
-            <small style="color: var(--muted); font-weight: 600"
-              >Soluciones para empresas</small
-            >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick Business App - Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">qb</div>
+        <div>
+          <div>Quick Business App</div>
+          <small style="color: var(--muted); font-weight: 600;">Soluciones para empresas</small>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card hero-card">
+          <div class="folder-bar">
+            <a class="sys-btn tab-btn" href="index.html">qb app</a>
+            <a class="sys-btn tab-btn" href="cumplimiento.html">Cumplimiento Regulatorio</a>
+            <a class="sys-btn tab-btn" href="agenda.html">Agenda Inteligente</a>
+            <a class="sys-btn tab-btn" href="gestion.html">Control de Gestión</a>
+            <a class="sys-btn tab-btn" href="cfdi.html">Visor CFDI</a>
           </div>
         </div>
-        <nav class="topnav" aria-label="Navegación"></nav>
-      </header>
+      </section>
 
-      <main>
-        <section class="hero">
-          <div class="card hero-card">
-            <div
-              class="folder-bar"
-              role="tablist"
-              aria-label="Pestañas de sistemas"
-            >
-              <button
-                class="sys-btn tab-btn"
-                type="button"
-                role="tab"
-                aria-selected="true"
-                data-target="quienes"
-              >
-                qb app
-              </button>
-              <button
-                class="sys-btn tab-btn"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-target="cumplimiento"
-              >
-                Cumplimiento Regulatorio
-              </button>
-              <button
-                class="sys-btn tab-btn"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-target="agenda"
-              >
-                Agenda Inteligente
-              </button>
-              <button
-                class="sys-btn tab-btn"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-target="gestion"
-              >
-                Control de Gestión
-              </button>
-              <button
-                class="sys-btn tab-btn"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-target="cfdi"
-              >
-                Visor CFDI
-              </button>
-            </div>
-          </div>
-        </section>
+      <section class="card system-card active">
+        <div class="system-summary">
+          <h3>Quick Business App</h3>
+          <p>Una vista sencilla para conocer nuestros sistemas y entrar al que necesites sin complicaciones.</p>
+        </div>
+        <div class="section-block">
+          <h4>Elige un sistema</h4>
+          <ul class="section-list">
+            <li>Abre una tarjeta para ver información detallada.</li>
+            <li>Cada sistema tiene su propia página independiente.</li>
+            <li>La presentación conserva un estilo limpio y profesional.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-        <section
-          id="quienes"
-          class="card system-card active"
-          data-panel="quienes"
-        >
-          <h3>Soluciones rápidas para negocios</h3>
-          <p>
-            Somos una propuesta enfocada en productividad, control y claridad
-            para empresas. Tienes acceso a sistemas de demostración para evaluar
-            su funcionamiento y decidir si se ajustan a tus necesidades.
-          </p>
-          <div class="info-box">
-            <strong>Objetivo</strong>
-            <div>
-              Presentar cada sistema de forma breve y directa, con acceso rápido
-              desde pestañas.
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="cumplimiento"
-          class="card system-card blue"
-          data-panel="cumplimiento"
-        >
-          <div class="system-top">
-            <div class="system-logo">
-              <img
-                src="imagenes/cumreinmobiliario.png"
-                alt="Logo de Cumplimiento Regulatorio"
-              />
-            </div>
-            <div class="system-summary">
-              <h3>Cumplimiento Regulatorio acorde a la Ley FPIORPI</h3>
-              <h3>(Ley antilavado de dinero)</h3>
-              <p>
-                Con este servicio se proporciona una herramienta para cumplir
-                con la Ley FPIORPI, en particular con la Fracción XV del
-                artículo 17 de la Ley relativa al arrendamiento de inmuebles.
-                Este servicio te permite cumplir con la identificación de
-                clientes, generación de archivos XML para la presentación de
-                avisos.
-              </p>
-            </div>
-          </div>
-          <div class="section-block">
-            <h4>Características</h4>
-            <ul class="section-list">
-              <li>
-                Consulta centralizada de cumplimiento y control de información.
-              </li>
-              <li>
-                Seguimiento de registros con acceso rápido a la vista principal.
-              </li>
-              <li>
-                Diseño pensado para dar claridad al estado general del sistema.
-              </li>
-            </ul>
-          </div>
-          <div class="section-block">
-            <h4>
-              Se requiere contratar el servicio Cumre Inmobiliario que incluye:
-            </h4>
-            <ul class="section-list">
-              <li>Proceso de regularización.</li>
-              <li>Servicio mensual de cumplimiento.</li>
-            </ul>
-          </div>
-          <div class="info-box">
-            <strong>Acceso al sistema</strong>
-            <div>
-              Ingresa desde el botón principal y utiliza las claves asignadas al
-              ambiente de demostración.
-            </div>
-            <div class="link-row" style="margin-top: 12px">
-              <a
-                class="sys-btn primary"
-                href="https://cumreinmobiliario.azurewebsites.net/"
-                target="_blank"
-                rel="noreferrer"
-                >Entrar al sistema</a
-              >
-              <a class="sys-btn" href="#" target="_blank" rel="noreferrer"
-                >Video de YouTube</a
-              >
-            </div>
-          </div>
-        </section>
-
-        <section id="agenda" class="card system-card teal" data-panel="agenda">
-          <div class="system-top">
-            <div class="system-logo">
-              <img
-                src="imagenes/agendainteligente.png"
-                alt="Logo de Agenda Inteligente"
-              />
-            </div>
-            <div class="system-summary">
-                                                                                                                                                                                    <h3>
-                Organiza citas y tareas con una vista simple para coordinar
-                recursos y actividades.
-              </h3>
-              <p>
-                Sistema para administrar agendas, citas y coordinación de
-                recursos con una experiencia clara y directa para el usuario.
-              </p>
-            </div>
-          </div>
-          <div class="section-block">
-            <h4>Características</h4>
-            <ul class="section-list">
-              <li>Control de citas y organización de recursos.</li>
-              <li>
-                Visualización rápida de agenda para el día o periodo
-                seleccionado.
-              </li>
-              <li>Diseño enfocado en productividad y atención ordenada.</li>
-            </ul>
-          </div>
-          <div class="section-block">
-            <h4>Condiciones de uso</h4>
-            <ul class="section-list">
-              <li>Acceso de demostración disponible para evaluación.</li>
-              <li>El entorno puede tener datos preconfigurados para prueba.</li>
-              <li>
-                Se recomienda usar credenciales del ambiente demo asignado.
-              </li>
-            </ul>
-          </div>
-          <div class="info-box">
-            <strong>Acceso al sistema</strong>
-            <div>Usuario: <strong>demo</strong></div>
-            <div>Contraseña: <strong>demo</strong></div>
-            <div class="link-row" style="margin-top: 12px">
-              <a
-                class="sys-btn primary"
-                href="https://agenda-inteligente.azurewebsites.net/"
-                target="_blank"
-                rel="noreferrer"
-                >Entrar a demo</a
-              >
-              <a class="sys-btn" href="#" target="_blank" rel="noreferrer"
-                >Video de YouTube</a
-              >
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="gestion"
-          class="card system-card cyan"
-          data-panel="gestion"
-        >
-          <div class="system-top">
-            <div class="system-logo">
-              <img
-                src="imagenes/ControlDeGestion.png"
-                alt="Logo de Control de Gestión"
-              />
-            </div>
-            <div class="system-summary">
-              <h3>
-                Supervisa proyectos mediante tareas con control, avance y
-                prioridades claras.
-              </h3>
-              <p>
-                Plataforma para seguimiento de tareas y proyectos, diseñada para
-                controlar indicadores, avances y decisiones desde un solo lugar.
-              </p>
-            </div>
-          </div>
-          <div class="section-block">
-            <h4>Características</h4>
-            <ul class="section-list">
-              <li>Seguimiento de proyectos y tareas.</li>
-              <li>Visualización de avances y control de prioridades.</li>
-              <li>
-                Organización para decisiones rápidas y seguimiento continuo.
-              </li>
-            </ul>
-          </div>
-          <div class="section-block">
-            <h4>Condiciones de uso</h4>
-            <ul class="section-list">
-              <li>Uso orientado a evaluación y control de tareas.</li>
-              <li>
-                La información del demo puede estar precargada para pruebas.
-              </li>
-              <li>
-                Acceso sujeto a las credenciales del ambiente de demostración.
-              </li>
-            </ul>
-          </div>
-          <div class="info-box">
-            <strong>Acceso al sistema</strong>
-            <div>
-              Usuario y contraseña disponibles en la versión de demostración.
-            </div>
-            <div class="link-row" style="margin-top: 12px">
-              <a
-                class="sys-btn primary"
-                href="https://controldegestion.azurewebsites.net/"
-                target="_blank"
-                rel="noreferrer"
-                >Ver demo</a
-              >
-              <a
-                class="sys-btn"
-                href="https://controldegestion.azurewebsites.net/"
-                target="_blank"
-                rel="noreferrer"
-                >Ir al sistema</a
-              >
-            </div>
-          </div>
-        </section>
-
-        <section id="cfdi" class="card system-card amber" data-panel="cfdi">
-          <div class="system-top">
-            <div class="system-logo">
-              <img src="imagenes/visorcfdi.png" alt="Logo de Visor CFDI" />
-            </div>
-            <div class="system-summary">
-              <h3>
-                Consulta y valida CFDI con acceso sencillo y versión gratuita
-                para comenzar.
-              </h3>
-              <p>
-                Solución breve para revisar CFDI, enfocada en la consulta rápida
-                y el acceso mediante registro previo.
-              </p>
-            </div>
-          </div>
-          <div class="section-block">
-            <h4>Características</h4>
-            <ul class="section-list">
-              <li>Consulta y revisión de CFDI.</li>
-              <li>Acceso sencillo para usuarios registrados.</li>
-              <li>Versión gratuita para comenzar a evaluar el sistema.</li>
-            </ul>
-          </div>
-          <div class="section-block">
-            <h4>Condiciones de uso</h4>
-            <ul class="section-list">
-              <li>El usuario debe registrarse antes de usar el sistema.</li>
-              <li>La versión gratis está disponible para iniciar pruebas.</li>
-              <li>
-                El acceso depende de las credenciales del ambiente asignado.
-              </li>
-            </ul>
-          </div>
-          <div class="info-box">
-            <strong>Acceso al sistema</strong>
-            <div>Primero registrarse y luego usar la versión gratuita.</div>
-            <div class="link-row" style="margin-top: 12px">
-              <a
-                class="sys-btn primary"
-                href="https://cfdi.azurewebsites.net/"
-                target="_blank"
-                rel="noreferrer"
-                >Registrarse</a
-              >
-              <a
-                class="sys-btn"
-                href="https://cfdi.azurewebsites.net/"
-                target="_blank"
-                rel="noreferrer"
-                >Ir al sistema</a
-              >
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        Una vista sencilla para presentar quiénes somos y mostrar un sistema a
-        la vez.
-      </footer>
-    </div>
-    <script src="script.js"></script>
-  </body>
+    <footer class="footer">Soluciones simples para operar mejor.</footer>
+  </div>
+</body>
 </html>
