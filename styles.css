@@ -28,6 +28,27 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
+.system-summary {
+  width: 100%;
+  min-width: 0;
+}
+
+
+.system-summary h3,
+.system-summary p {
+  margin: 0 0 0 6px;
+  width: 100%;
+  max-width: none;
+}
+
+
+
+.system-summary h3 {
+  margin: 0 0 8px 6px;
+}
+
+
+
 .shell {
   width: min(var(--max), calc(100% - 32px));
   margin: 0 auto;
@@ -238,12 +259,16 @@ h1 {
 }
 
 .system-summary h3 {
-  margin: 0 0 8px;
+  margin: 0 0 8px 6px;
 }
 
+
 .system-summary p {
-  margin: 0;
+  margin: 0 0 0 6px;
+  width: 100%;
+  max-width: none;
 }
+
 
 .section-block {
   margin-top: 18px;
@@ -278,16 +303,19 @@ h1 {
 }
 
 .system-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 10px 6px;
   font-size: 1.5rem;
 }
 
+
 .system-card p {
-  margin: 0;
+  margin: 0 0 0 6px;
   color: var(--muted);
   line-height: 1.65;
-  max-width: 75ch;
+  max-width: none;
+  width: 100%;
 }
+
 
 .info-box {
   margin-top: 16px;
@@ -341,6 +369,7 @@ h1 {
   font-size: 0.95rem;
 }
 
+
 @media (max-width: 760px) {
   .topbar {
     align-items: start;
@@ -360,3 +389,4 @@ h1 {
     padding: 22px;
   }
 }
+
