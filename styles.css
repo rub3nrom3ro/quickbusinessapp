@@ -209,6 +209,13 @@ h1 {
   margin-bottom: 14px;
 }
 
+.system-top {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
 .system-logo {
   display: flex;
   align-items: center;
@@ -228,6 +235,35 @@ h1 {
   max-height: 100%;
   object-fit: contain;
   display: block;
+}
+
+.system-summary h3 {
+  margin: 0 0 8px;
+}
+
+.system-summary p {
+  margin: 0;
+}
+
+.section-block {
+  margin-top: 18px;
+}
+
+.section-block h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.section-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.section-list li + li {
+  margin-top: 6px;
 }
 
 .tag {
@@ -309,6 +345,13 @@ h1 {
   .topbar {
     align-items: start;
     flex-direction: column;
+  }
+  .system-top {
+    grid-template-columns: 1fr;
+  }
+  .system-logo {
+    width: 96px;
+    height: 96px;
   }
   .hero-card {
     padding: 28px;
