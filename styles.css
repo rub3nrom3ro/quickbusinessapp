@@ -9,6 +9,7 @@
   --teal: #0f9b8e;
   --cyan: #0284c7;
   --amber: #b45309;
+  --gray: #525150;
   --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
   --max: 1160px;
 }
@@ -41,6 +42,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+.video-box {
+  margin-top: 16px;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
 .system-summary {
@@ -78,6 +84,7 @@ a {
   align-items: center;
   gap: 8px;
   font-weight: 800;
+  color: rgba(72, 15, 15, 0.725);
 }
 .brand-mark {
   width: 42px;
@@ -376,6 +383,9 @@ sys-btn {
 .amber {
   border-left: 10px solid var(--amber);
 }
+.gray {
+  border-left: 10px solid var(--gray);
+}
 
 .blue .tag {
   background: var(--blue);
@@ -389,7 +399,9 @@ sys-btn {
 .amber .tag {
   background: var(--amber);
 }
-
+.gray .tag {
+  background: var(--gray);
+}
 .blue .primary-btn {
   background: linear-gradient(135deg, var(--blue), #4f83ff);
 }
