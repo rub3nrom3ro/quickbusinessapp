@@ -544,3 +544,7 @@ sys-btn {
   background: #102a43;
 }
 
+
+.privacy-text p {
+  text-align: justify;
+}
