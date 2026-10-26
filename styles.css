@@ -129,9 +129,10 @@ a {
 
 .folder-bar {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: end;
-  padding: 0px 10px 0px 26px;
+  padding: 0 10px 0 26px;
   border-bottom: 1px solid rgba(20, 50, 74, 0.08);
 }
 
@@ -434,6 +435,12 @@ sys-btn {
   background: linear-gradient(135deg, var(--amber), #d97706);
 }
 
+.privacy-link {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .footer {
   margin-top: 24px;
   color: var(--muted);
@@ -456,7 +463,84 @@ sys-btn {
   .hero-card {
     padding: 12px;
   }
+  .folder-bar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 0;
+    border: 0;
+  }
+  .folder-bar .tab-btn {
+    min-width: 0;
+    min-height: 52px;
+    padding: 10px 8px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-align: center;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    top: 0;
+  }
   .system-card {
     padding: 12px;
   }
 }
+.privacy-page {
+  padding: clamp(20px, 5vw, 42px);
+}
+
+.privacy-page .system-summary p {
+  max-width: 75ch;
+  text-align: left;
+}
+
+.privacy-sections {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.privacy-section {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  scroll-margin-top: 20px;
+}
+
+.privacy-section h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.privacy-section p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.privacy-placeholder {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.califica-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.califica-brand img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  padding: 8px;
+  border-radius: 18px;
+  background: #102a43;
+}
+
